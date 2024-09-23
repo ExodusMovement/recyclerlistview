@@ -5,7 +5,7 @@
     "module": "commonjs", // export compatibility
     "target": "es2022", // target Node.js(v6)
     "moduleResolution": "node", // target Node.js(v6)
-    "declaration": true, // generate TypeScript definitions
+    "declaration": false, // generate TypeScript definitions
     "rootDir": "src",
     "strict": true,
     "noImplicitReturns": true,
