@@ -1,9 +1,5 @@
 # RecyclerListView
 
-[![npm version](https://img.shields.io/npm/v/recyclerlistview.svg)](https://www.npmjs.com/package/recyclerlistview)
-[![appveyor](https://ci.appveyor.com/api/projects/status/uwnp3r49127esj7k/branch/master?svg=true)](https://ci.appveyor.com/project/naqvitalha/recyclerlistview/branch/master)
-[![License](https://img.shields.io/badge/License-Apache%202.0-brightgreen.svg)](https://opensource.org/licenses/Apache-2.0)
-
 If this project has helped you out, please support us with a star :star2:.
 
 This is a high performance listview for React Native and Web with support for complex layouts. JS only with no native dependencies, inspired by both RecyclerView on Android
@@ -62,17 +58,16 @@ In case you cannot determine heights of items in advance just set `forceNonDeter
 
 ## Demo
 
-**Production Flipkart Grocery Demo Video (or try the app):** https://youtu.be/6YqEqP3MmoU  
-**Infinite Loading/View Change (Expo):** https://snack.expo.io/@naqvitalha/rlv-demo  
-**Mixed ViewTypes:** https://snack.expo.io/B1GYad52b  
-**extendedState,stableIDs and ItemAnimator (Expo):** https://snack.expo.io/@arunreddy10/19bb8e  
-**Sample project:** https://github.com/naqvitalha/travelMate  
-**Web Sample (Using RNW):** https://codesandbox.io/s/k54j2zx977, https://jolly-engelbart-8ff0d0.netlify.com/  
-**Context Preservation Sample:** https://github.com/naqvitalha/recyclerlistview-context-preservation-demo
+**Production Flipkart Grocery Demo Video (or try the app):** 
+**Infinite Loading/View Change (Expo):** 
+**Mixed ViewTypes:** 
+**extendedState,stableIDs and ItemAnimator (Expo):** 
+**Sample project:** 
+**Web Sample (Using RNW):** 
+**Context Preservation Sample:**
 
-**Other Video:** https://www.youtube.com/watch?v=Tnv4HMmPgMc
+**Other Video:** 
 
-[![Watch Video](https://img.youtube.com/vi/Tnv4HMmPgMc/0.jpg)](https://www.youtube.com/watch?v=Tnv4HMmPgMc)
 
 ## Props
 
@@ -122,7 +117,6 @@ For full feature set have a look at prop definitions of [RecyclerListView](https
 
 As seen in the example below
 
-![Alt Text](/docs/images/getWindowCorrection_demo.gif)
 
 ## Typescript
 
@@ -162,5 +156,5 @@ Typescript works out of the box. The only execption is with the inherited Scroll
 **[Apache v2.0](https://github.com/Flipkart/recyclerlistview/blob/master/LICENSE.md)**
 
 ## Contact Us
-Please open issues for any bugs that you encounter. You can reach out to me on twitter [@naqvitalha](https://www.twitter.com/naqvitalha) or, write to cross-platform@flipkart.com for any questions that
+Please open issues for any bugs that you encounter. You can reach out to me on twitter `@naqvitalha` or, write to cross-platform@flipkart.com for any questions that
 you might have.
