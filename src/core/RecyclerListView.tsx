@@ -21,7 +21,7 @@
 import debounce = require("lodash.debounce");
 import * as PropTypes from "prop-types";
 import * as React from "react";
-import { ObjectUtil, Default } from "ts-object-utils";
+import { ObjectUtil, Default } from "../utils/ObjectUtils";
 import ContextProvider from "./dependencies/ContextProvider";
 import { BaseDataProvider } from "./dependencies/DataProvider";
 import { Dimension, BaseLayoutProvider } from "./dependencies/LayoutProvider";

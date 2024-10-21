@@ -36,8 +36,7 @@
   "homepage": "https://github.com/ExodusMovement/recyclerlistview/tree/exodus-4.2.1",
   "dependencies": {
     "lodash.debounce": "4.0.8",
-    "prop-types": "15.8.1",
-    "ts-object-utils": "0.0.5"
+    "prop-types": "15.8.1"
   },
   "peerDependencies": {
     "react": ">= 15.2.1",

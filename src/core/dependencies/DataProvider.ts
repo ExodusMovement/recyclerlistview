@@ -1,4 +1,4 @@
-import { ObjectUtil } from "ts-object-utils";
+import { ObjectUtil } from "../../utils/ObjectUtils";
 
 /***
  * You can create a new instance or inherit and override default methods
