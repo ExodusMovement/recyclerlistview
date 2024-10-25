@@ -154,7 +154,3 @@ Typescript works out of the box. The only execption is with the inherited Scroll
 
 ## License
 **[Apache v2.0](https://github.com/Flipkart/recyclerlistview/blob/master/LICENSE.md)**
-
-## Contact Us
-Please open issues for any bugs that you encounter. You can reach out to me on twitter `@naqvitalha` or, write to cross-platform@flipkart.com for any questions that
-you might have.
