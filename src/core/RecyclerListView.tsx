@@ -756,7 +756,7 @@ export default class RecyclerListView<P extends RecyclerListViewProps, S extends
         const renderedItems = [];
         if (this.state) {
             for (const key in this.state.renderStack) {
-                if (this.state.renderStack.hasOwnProperty(key)) {
+                if (Object.prototype.hasOwnProperty.call(this.state.renderStack, key)) {
                     renderedItems.push(this._renderRowUsingMeta(this.state.renderStack[key]));
                 }
             }

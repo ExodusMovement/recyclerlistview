@@ -11,8 +11,8 @@ export default class RecycleItemPool {
     private _availabilitySet: PseudoSet;
 
     constructor() {
-        this._recyclableObjectMap = {};
-        this._availabilitySet = {};
+        this._recyclableObjectMap = Object.create(null);
+        this._availabilitySet = Object.create(null);
     }
 
     public putRecycledObject(objectType: string | number, object: string): void  {
@@ -29,7 +29,7 @@ export default class RecycleItemPool {
         const objectSet = this._getRelevantSet(objectType);
         let recycledObject;
         for (const property in objectSet) {
-            if (objectSet.hasOwnProperty(property)) {
+            if (Object.prototype.hasOwnProperty.call(objectSet, property)) {
                 recycledObject = property;
                 break;
             }
@@ -52,14 +52,14 @@ export default class RecycleItemPool {
     }
 
     public clearAll(): void  {
-        this._recyclableObjectMap = {};
-        this._availabilitySet = {};
+        this._recyclableObjectMap = Object.create(null);
+        this._availabilitySet = Object.create(null);
     }
 
     private _getRelevantSet(objectType: string): NullablePseudoSet {
         let objectSet = this._recyclableObjectMap[objectType];
         if (!objectSet) {
-            objectSet = {};
+            objectSet = Object.create(null);
             this._recyclableObjectMap[objectType] = objectSet;
         }
         return objectSet;

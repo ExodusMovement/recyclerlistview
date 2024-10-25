@@ -63,8 +63,8 @@ export default class VirtualRenderer {
         this._fetchStableId = fetchStableId;
 
         //Keeps track of keys of all the currently rendered indexes, can eventually replace renderStack as well if no new use cases come up
-        this._stableIdToRenderKeyMap = {};
-        this._engagedIndexes = {};
+        this._stableIdToRenderKeyMap = Object.create(null);
+        this._engagedIndexes = Object.create(null);
         this._renderStackChanged = renderStackChanged;
         this._scrollOnNextUpdate = scrollOnNextUpdate;
         this._dimensions = null;
@@ -259,9 +259,9 @@ export default class VirtualRenderer {
     public handleDataSetChange(newDataProvider: BaseDataProvider): void {
         const getStableId = newDataProvider.getStableId;
         const maxIndex = newDataProvider.getSize() - 1;
-        const activeStableIds: { [key: string]: number } = {};
-        const newRenderStack: RenderStack = {};
-        const keyToStableIdMap: { [key: string]: string } = {};
+        const activeStableIds: { [key: string]: number } = Object.create(null);
+        const newRenderStack: RenderStack = Object.create(null);
+        const keyToStableIdMap: { [key: string]: string } = Object.create(null);
 
         // Do not use recycle pool so that elements don't fly top to bottom or vice versa
         // Doing this is expensive and can draw extra items
@@ -271,7 +271,7 @@ export default class VirtualRenderer {
 
         //Compute active stable ids and stale active keys and resync render stack
         for (const key in this._renderStack) {
-            if (this._renderStack.hasOwnProperty(key)) {
+            if (Object.prototype.hasOwnProperty.call(this._renderStack, key)) {
                 const index = this._renderStack[key].dataIndex;
                 if (!ObjectUtil.isNullOrUndefined(index)) {
                     if (index <= maxIndex) {
@@ -338,7 +338,7 @@ export default class VirtualRenderer {
         Object.assign(this._renderStack, newRenderStack);
 
         for (const key in this._renderStack) {
-            if (this._renderStack.hasOwnProperty(key)) {
+            if (Object.prototype.hasOwnProperty.call(this._renderStack, key)) {
                 const index = this._renderStack[key].dataIndex;
                 if (!ObjectUtil.isNullOrUndefined(index) && ObjectUtil.isNullOrUndefined(this._engagedIndexes[index])) {
                     const type = this._layoutProvider.getLayoutTypeForIndex(index);
