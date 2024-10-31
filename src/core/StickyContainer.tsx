@@ -34,7 +34,7 @@ export interface RecyclerChild extends React.ReactElement<RecyclerListViewProps>
     props: RecyclerListViewProps;
 }
 export default class StickyContainer<P extends StickyContainerProps> extends ComponentCompat<P> {
-    public static propTypes = {};
+    public static propTypes = Object.create(null);
     private _recyclerRef: RecyclerListView<RecyclerListViewProps, RecyclerListViewState> | undefined = undefined;
     private _dataProvider: BaseDataProvider;
     private _layoutProvider: BaseLayoutProvider;

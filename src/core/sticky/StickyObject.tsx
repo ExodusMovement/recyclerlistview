@@ -166,7 +166,7 @@ export default abstract class StickyObject<P extends StickyObjectProps> extends 
     protected stickyViewVisible(_visible: boolean, shouldTriggerRender: boolean = true): void {
         this.stickyVisiblity = _visible;
         if (shouldTriggerRender) {
-            this.setState({});
+            this.setState(Object.create(null));
         }
     }
 

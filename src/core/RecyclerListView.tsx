@@ -144,7 +144,7 @@ export default class RecyclerListView<P extends RecyclerListViewProps, S extends
         renderAheadOffset: IS_WEB ? 1000 : 250,
     };
 
-    public static propTypes = {};
+    public static propTypes = Object.create(null);
 
     private refreshRequestDebouncer = debounce((executable: () => void) => {
         executable();
@@ -211,8 +211,8 @@ export default class RecyclerListView<P extends RecyclerListViewProps, S extends
             this._initTrackers(props);
         } else {
             this.state = {
-                internalSnapshot: {},
-                renderStack: {},
+                internalSnapshot: Object.create(null),
+                renderStack: Object.create(null),
             } as S;
         }
     }
@@ -384,7 +384,7 @@ export default class RecyclerListView<P extends RecyclerListViewProps, S extends
     // Force Rerender forcefully to update view renderer. Use this in rare circumstances
     public forceRerender(): void {
         this.setState({
-            internalSnapshot: {},
+            internalSnapshot: Object.create(null),
         });
     }
 
@@ -605,7 +605,7 @@ export default class RecyclerListView<P extends RecyclerListViewProps, S extends
          */
         if (!this.state && !this.getHasRenderedOnce()) {
             this.state = {
-                internalSnapshot: {},
+                internalSnapshot: Object.create(null),
                 renderStack: stack,
             } as S;
             return true;
@@ -653,7 +653,7 @@ export default class RecyclerListView<P extends RecyclerListViewProps, S extends
             (offset.x > 0 && contentDimension.width > this._layout.width)) {
             this._pendingScrollToOffset = offset;
             if (!this._initStateIfRequired()) {
-                this.setState({});
+                this.setState(Object.create(null));
             }
         } else {
             this._virtualRenderer.startViewabilityTracker(this._getWindowCorrection(offset.x, offset.y, props));

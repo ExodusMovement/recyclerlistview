@@ -58,7 +58,7 @@ export default class VirtualRenderer {
                 fetchStableId: StableIdProvider,
                 isRecyclingEnabled: boolean) {
         //Keeps track of items that need to be rendered in the next render cycle
-        this._renderStack = {};
+        this._renderStack = Object.create(null);
 
         this._fetchStableId = fetchStableId;
 
